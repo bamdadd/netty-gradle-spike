@@ -1,0 +1,20 @@
+apply plugin: "java"
+apply plugin: "idea"
+apply plugin: "application"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile (
+            "io.netty:netty-all:4.0.25.Final",
+            "org.jboss.netty:netty:latest.integration",
+            "com.google.inject:guice:latest.integration",
+            "com.google.guava:guava:latest.integration"
+    )
+}
+
+run {
+    mainClassName = 'bamdad.nettytest.com.EchoServer'
+}
